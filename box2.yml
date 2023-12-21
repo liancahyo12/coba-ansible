@@ -3,7 +3,7 @@
 
   tasks:
   - name: show docker ps
-    ansible.builtin.shell: docker ps
+    ansible.builtin.shell: docker restart invite
     register: out
   
   - debug: var=out.stdout_lines
