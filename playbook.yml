@@ -7,13 +7,3 @@
     register: out
   
   - debug: var=out.stdout_lines
-
-- hosts: box2
-  become: yes
-
-  tasks:
-  - name: show docker ps
-    ansible.builtin.shell: docker ps
-    register: out
-  
-  - debug: var=out.stdout_lines
