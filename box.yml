@@ -3,7 +3,7 @@
 
   tasks:
   - name: start docker
-    ansible.builtin.shell: docker start {{ container }}
+    ansible.builtin.shell: docker start -a {{ container }}
     register: out
   
   - debug: var=out.stdout_lines
