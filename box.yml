@@ -2,8 +2,8 @@
   become: yes
 
   tasks:
-  - name: show docker ps
-    ansible.builtin.shell: docker start certbot-nxc
+  - name: start docker
+    ansible.builtin.shell: docker start {{ container }}
     register: out
   
   - debug: var=out.stdout_lines
