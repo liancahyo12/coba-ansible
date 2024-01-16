@@ -1,0 +1,9 @@
+- hosts: box1
+  become: yes
+
+  tasks:
+  - name: ping
+    ansible.builtin.shell: ping -c 5 192.168.2.1
+    register: out
+  
+  - debug: var=out.stdout_lines
