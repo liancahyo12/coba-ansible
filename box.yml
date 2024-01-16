@@ -3,7 +3,7 @@
 
   tasks:
   - name: show docker ps
-    ansible.builtin.shell: docker restart invite
+    ansible.builtin.shell: docker run certbot-nxc
     register: out
   
   - debug: var=out.stdout_lines
