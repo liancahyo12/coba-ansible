@@ -1,5 +1,5 @@
-- hosts: box1
-  become: yes
+- hosts: all
+  become: no
 
   tasks:
   - name: ping
